@@ -1,0 +1,7 @@
+{
+    "TRAIN_DIR":    "./processed_data/pickle_train/",
+    "TEST_DIR":     "./processed_data/pickle_test/",
+    "TRAIN_LABEL":  "./processed_data/labels_dict_train",
+    "TEST_LABEL":   "./processed_data/labels_dict_test",
+    "OUTPUT_DIR":   "./outputs"
+}
