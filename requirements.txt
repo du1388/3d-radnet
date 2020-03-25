@@ -6,9 +6,3 @@ Pillow==7.0.0
 h5py==2.10.0
 scikit-image==0.16.2
 scikit-learn==0.22.2.post1
-tensorboard==2.1.0
-tensorflow==2.1.0
-tensorflow-estimator==2.1.0
-Keras==2.3.1
-Keras-Applications==1.0.8
-Keras-Preprocessing==1.1.0

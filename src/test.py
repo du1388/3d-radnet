@@ -117,10 +117,10 @@ def Main():
         y_view = format_view_label(test_dict[img_list[ind]][2])
         y_ctrs = format_contrast_label(test_dict[img_list[ind]][3])
         y_body = format_body_label(test_dict[img_list[ind]][4])
-        out_seq = {"prediction":list(pred[0][0].numpy()),"label":list(y_seq)}
-        out_view = {"prediction":list(pred[1][0].numpy()),"label":list(y_view)}
-        out_ctrs = {"prediction":list(pred[2][0].numpy()),"label":list(y_ctrs)}
-        out_body = {"prediction":list(pred[3][0].numpy()),"label":list(y_body)}
+        out_seq = {"prediction":list(pred[0][0]),"label":list(y_seq)}
+        out_view = {"prediction":list(pred[1][0]),"label":list(y_view)}
+        out_ctrs = {"prediction":list(pred[2][0]),"label":list(y_ctrs)}
+        out_body = {"prediction":list(pred[3][0]),"label":list(y_body)}
         pred_dict[img_list[ind]] = [out_seq,out_view,out_ctrs,out_body]
 
     with open(os.path.join(output_dir,"test_results_dict"),"wb") as handle:
