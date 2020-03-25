@@ -15,16 +15,26 @@ This project was developed with the follow packages:
 - cuda 10.0
 - cudnn 7.6.5 for cuda 10.0
 
-We strongly recommend creating a seperate python or anaconda environments to test. For example in anaconda environment:
+Other python dependancies are listed in the ```requirements.txt```. We strongly recommend creating a seperate python or anaconda environments to test. For example in anaconda environment:
 ```
 (base) C:\path_to_directory\3d-radnet> conda create -n tf-gpu python=3.6 tensorflow-gpu==2.0.0
 (base) C:\path_to_directory\3d-radnet> conda activate tf-gpu
 (tf-gpu) C:\path_to_directory\3d-radnet> pip install -r requirements.txt
 ```
-
+Anaconda 3 can be downloaded at their [website](https://www.anaconda.com/distribution/#download-section).
 
 ## Examples
-example usage
+The model was developed by using tensorflow.keras api which is compatible with keras ```model.fit``` and ```model.fit_generator```.
+```
+from src.utils.models import RadNet_resnet3d
 
+model = RadNet_resnet3d(input_shape=(32,192,192))
+print(model.summary())
+```
+To test network, you can run the bash script or windows .bat script to test the network on the testing data and collect the performances in the ```outputs``` directory.
+```
+test_example.sh
+test_example.bat
+```
 ## Todo list
 stuff still needed
