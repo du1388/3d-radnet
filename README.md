@@ -17,15 +17,31 @@ This project was developed with the follow packages:
 
 Other python dependancies are listed in the ```requirements.txt```. We strongly recommend creating a seperate python or anaconda environments to test. For example in anaconda environment:
 ```
-(base) C:\path_to_directory\3d-radnet> conda create -n tf-gpu python=3.6 tensorflow-gpu==2.0.0
-(base) C:\path_to_directory\3d-radnet> conda activate tf-gpu
-(tf-gpu) C:\path_to_directory\3d-radnet> pip install -r requirements.txt
+(base) ..\3d-radnet> conda create -n tf-gpu python=3.6 tensorflow-gpu==2.0.0
+(base) ..\3d-radnet> conda activate tf-gpu
+(tf-gpu) ..\3d-radnet> pip install -r requirements.txt
 ```
 Anaconda 3 can be downloaded at their [website](https://www.anaconda.com/distribution/#download-section).
 
 ## Examples
-The model was developed by using tensorflow.keras api which is compatible with keras ```model.fit()``` and ```model.fit_generator()```. The model can be called with the ```RadNet_resnet3d()``` function in ```utils.models```. For example:
+### Data
+Currently, we have only provided the testing dataset that had been processed and resized to required size of the model used. We plan to release the processed training dataset used in the study in the near future. The image data is saved as a dictionary of images and associated image spacing in python pickle format.  
+
+**For example:** 
+```python
+import pickle
+
+with open("processed_data/pickle_test/BreastDx-01-0013_001", "rb) as handle:
+    img = pickle.load(handle)
+    
+img_array = img["img_array"]        # uint8 array of volumetric image array 
+img_spacing = img["img_spacing"]    # tuple corresponding to the resized image spacing of the scan
 ```
+### Model
+The model was developed by using tensorflow.keras api which is compatible with keras ```model.fit()``` and ```model.fit_generator()```. The model can be called with the ```RadNet_resnet3d()``` function in ```utils.models```.  
+  
+**For example:**
+```python
 from src.utils.models import RadNet_resnet3d
 
 model = RadNet_resnet3d(input_shape=(32,192,192))
@@ -37,4 +53,4 @@ test_example.sh
 test_example.bat
 ```
 ## Todo list
-stuff still needed
+- Du
