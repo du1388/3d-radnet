@@ -61,4 +61,5 @@ As one of the main objective is to provide a compiled dataset for researcher to 
 
 - Compile and process images to Nifti format.
 - Train model with different backbone network architecture.
+- Test transfer learning on different tasks and datasets (segmentation, classification, regression etc.)
 - Relsease a compiled DICOM Metadata and headers of the TCIA dataset to faciliate research and development on improving the data mining and label generation.
