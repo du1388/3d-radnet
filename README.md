@@ -24,7 +24,7 @@ Other python dependancies are listed in the ```requirements.txt```. We strongly 
 Anaconda 3 can be downloaded at their [website](https://www.anaconda.com/distribution/#download-section).
 
 ## Examples
-The model was developed by using tensorflow.keras api which is compatible with keras ```model.fit()``` and ```model.fit_generator()```. The model can be called with the ```RadNet_resnet3d()``` function in the ```utils.models```. For example:
+The model was developed by using tensorflow.keras api which is compatible with keras ```model.fit()``` and ```model.fit_generator()```. The model can be called with the ```RadNet_resnet3d()``` function in ```utils.models```. For example:
 ```
 from src.utils.models import RadNet_resnet3d
 
