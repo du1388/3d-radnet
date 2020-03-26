@@ -15,7 +15,9 @@ This project was developed with the follow packages:
 - cuda 10.0
 - cudnn 7.6.5 for cuda 10.0
 
-Other python dependancies are listed in the ```requirements.txt```. We strongly recommend creating a seperate python or anaconda environments to test. For example in anaconda environment:
+Other python dependancies are listed in the ```requirements.txt```. We strongly recommend creating a seperate python or anaconda environments to test.  
+
+**For example in anaconda environment:**
 ```
 (base) ..\3d-radnet> conda create -n tf-gpu python=3.6 tensorflow-gpu==2.0.0
 (base) ..\3d-radnet> conda activate tf-gpu
