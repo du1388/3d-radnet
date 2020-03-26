@@ -2,7 +2,7 @@
 This repository is currently still under development. The work presented in this repository is currently under consideration for the Medical Imaging and Deep Learning 2020 conference (MIDL 2020). The publication can be found in the [link here]( https://openreview.net/forum?id=CCbuElJreP).
 
 ## Introduction
-**3D - RADNet** which stands for *extracting **R**adiological imaging **A**ttibutes from **D**ICOM headers network*, is a 3D convolution neural network trained to classify the image body coverage, view and scan sequence and parameters (see the figure below). The movtivation of this work is to see whether we can extract
+**3D - RADNet** which stands for *extracting **R**adiological imaging **A**ttibutes from **D**ICOM headers network*, is a 3D convolution neural network trained to classify the image body coverage, view and scan sequence and parameters (see the figure below). The movtivation of this work is to see  whether we can automatically or semi-automatically extract labels from DICOM metadata of a large amount of DICOM images from publicly available datasets to train a convolution neural network for transfer learning in the medical imaging domain.
 
 ![Model predictions](figures/Figures.png)
 
@@ -29,7 +29,7 @@ Anaconda 3 can be downloaded at their [website](https://www.anaconda.com/distrib
 
 ## Examples
 ### Data
-Currently, we have only provided the training and testing dataset that had been processed and resized to required size of the model used. We plan to release the processed dataset in different format in the near future. The image data is saved as a dictionary of images and associated image spacing in python pickle format.  
+For information about the datasets used in this study please check our publication. Currently, we have only provided the training and testing dataset that had been processed and resized to required size of the model used. We plan to release the processed dataset in different format in the near future. The image data is saved as a dictionary of images and associated image spacing in python pickle format.  
 
 **For example:** 
 ```python
@@ -57,7 +57,8 @@ test_example.sh
 test_example.bat
 ```
 ## Future updates
-As one of the main object is to provide to 
-- Compile and process images to 
+As one of the main objective is to provide a compiled dataset for researcher to develop 3D networks for medical images, we want to accommodate different input sizes. However due to the size of the original dataset it is not feasible to redistribute in the original size. We are currently exploring how to repackage the dataset such that it is more lightweight easier to access.
+
+- Compile and process images to Nifti format.
 - Train model with different backbone network architecture.
 - Relsease a compiled DICOM Metadata and headers of the TCIA dataset to faciliate research and development on improving the data mining and label generation.
