@@ -48,13 +48,13 @@ The model was developed by using tensorflow.keras api which is compatible with k
 ```python
 from src.utils.models import RadNet_resnet3d
 
-model = RadNet_resnet3d(input_shape=(32,192,192))
+model = RadNet_resnet3d(input_shape=(48,192,192))
 print(model.summary())
 ```
 To test network, you can run the bash script or windows bat script to test the network on the testing data and collect the performances in the ```outputs``` directory.
 ```
-test_example.sh
-test_example.bat
+test_example.sh     # for bash linux
+test_example.bat    # for windows
 ```
 ## Future developments
 As one of the main objective is to provide a compiled dataset for researcher to develop 3D networks for medical images, we want to accommodate different input sizes. However due to the size of the original dataset it is not feasible to redistribute in the original size. We are currently exploring how to repackage the dataset such that it is more lightweight easier to access.
