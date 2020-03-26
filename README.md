@@ -29,7 +29,7 @@ Anaconda 3 can be downloaded at their [website](https://www.anaconda.com/distrib
 
 ## Examples
 ### Data
-For information about the datasets used in this study please check our publication. Currently, we have only provided the training and testing dataset that had been processed and resized to required size of the model used. We plan to release the processed dataset in different format in the near future. The image data is saved as a dictionary of images and associated image spacing in python pickle format.  
+For information about the datasets used in this study, please check our publication. Currently, we have only provided the training and testing dataset that had been processed and resized to required size of the model used. We plan to release the processed dataset in different format in the near future. The image data is saved as a dictionary of images and associated image spacing in python pickle format.  
 
 **For example:** 
 ```python
