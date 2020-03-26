@@ -56,7 +56,7 @@ To test network, you can run the bash script or windows bat script to test the n
 test_example.sh
 test_example.bat
 ```
-## Future updates
+## Future developments
 As one of the main objective is to provide a compiled dataset for researcher to develop 3D networks for medical images, we want to accommodate different input sizes. However due to the size of the original dataset it is not feasible to redistribute in the original size. We are currently exploring how to repackage the dataset such that it is more lightweight easier to access.
 
 - Compile and process images to Nifti format.
