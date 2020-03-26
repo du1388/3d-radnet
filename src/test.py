@@ -92,7 +92,7 @@ def Main():
 
     # Get Model
     model = RadNet_resnet3d()
-    model.load_weights("src/models/weights-improvement-21-0.3908-0.2736.hdf5")
+    model.load_weights("./models/weights-improvement-21-0.3908-0.2736.hdf5")
     print(model.summary())
 
     # Get Predictions
@@ -105,6 +105,7 @@ def Main():
             crt_img = pickle.load(handle)
             handle.close()
 
+        # Format image for input
         img_array = crt_img["img_array"]
         img_array = (img_array - np.min(img_array))/(np.max(img_array)-np.min(img_array)).astype("float32")
         img_array = CenterImage(img_array,(48,192,192)) # fix size with zero padding 
@@ -123,6 +124,7 @@ def Main():
         out_body = {"prediction":list(pred[3][0]),"label":list(y_body)}
         pred_dict[img_list[ind]] = [out_seq,out_view,out_ctrs,out_body]
 
+    # Save prediction and labels for analysis later
     with open(os.path.join(output_dir,"test_results_dict"),"wb") as handle:
         pickle.dump(pred_dict,handle)
     print("\nFinished.")
