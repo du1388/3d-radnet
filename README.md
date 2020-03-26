@@ -9,7 +9,7 @@ This repository is currently still under development. The work presented in this
 ## Requirements and Installations
 - The testing data and the model's weights for this network can be downloaded from [Google drive](https://drive.google.com/drive/folders/12mjuS23pBy-KZTN3KNDJAlTxr2tttioX?usp=sharing).  
 
-Please add the folder and all its contents of ```processed_data``` in the root directory and add the weights files into directory ```src/models/```.
+Please extract contents of the ```processed_data.zip``` to the root directory and also the ```models``` folder to the root directory.
 
 This project was developed with the follow packages:
 - python 3.6
