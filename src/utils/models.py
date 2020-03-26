@@ -2,7 +2,7 @@ import os,sys
 from tensorflow.keras import layers
 from networks import ResNet3D
 
-def RadNet_resnet3d(input_shape=(32,192,192)):
+def RadNet_resnet3d(input_shape=(48,192,192)):
 
     # Define outputs
     out_seq = layers.Dense(5,activation="softmax",name="out_seq")

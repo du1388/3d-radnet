@@ -92,7 +92,7 @@ def Main():
 
     # Get Model
     model = RadNet_resnet3d()
-    model.load_weights("src/models/weights-improvement-17-0.4663.hdf5")
+    model.load_weights("src/models/weights-improvement-21-0.3908-0.2736.hdf5")
     print(model.summary())
 
     # Get Predictions
@@ -107,7 +107,7 @@ def Main():
 
         img_array = crt_img["img_array"]
         img_array = (img_array - np.min(img_array))/(np.max(img_array)-np.min(img_array)).astype("float32")
-        img_array = CenterImage(img_array,(32,192,192)) # fix size with zero padding 
+        img_array = CenterImage(img_array,(48,192,192)) # fix size with zero padding 
         img_array = np.expand_dims(img_array,axis=-1)
         x_test = np.array([img_array])
         pred = model.predict_on_batch(x_test)
