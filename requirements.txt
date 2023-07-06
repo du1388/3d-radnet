@@ -1,6 +1,6 @@
 numpy==1.22.0
 pandas==1.0.3
-scipy==1.4.1
+scipy==1.10.0
 SimpleITK==1.2.4
 Pillow==9.3.0
 h5py==2.10.0
